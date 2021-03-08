@@ -1,0 +1,246 @@
+@font-face {
+  font-family: "Sora";
+  src: url(/FONTS/Sora.ttf);
+}
+
+@font-face {
+  font-family: "Fell";
+  src: url(/FONTS/Fell.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin-top: 60px;
+}
+
+header {
+  height: 60px;
+  width: 100%;
+  background-color: #04010F;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+header .container {
+  width: 100%;
+  height: 60px;
+}
+
+header .container .container__img {
+  width: 45px;
+  height: 40px;
+  float: left;
+  margin: 10px 20px;
+}
+
+header .container .container__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+header .container .toggle {
+  width: 33px;
+  height: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border-radius: 3px;
+  float: right;
+  margin: 13.5px 20px 13.5px 0;
+}
+
+header .container .toggle .one {
+  width: 100%;
+  background-color: #E6E5E3;
+  height: 3px;
+  -webkit-transition: -webkit-transform 0.1s linear;
+  transition: -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear;
+  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+}
+
+body.active header .container .toggle .one {
+  -webkit-transform: rotate(40deg) translateY(10px);
+          transform: rotate(40deg) translateY(10px);
+}
+
+header .container .toggle .two {
+  width: 100%;
+  background-color: #E6E5E3;
+  height: 3px;
+  margin: 5px 0;
+}
+
+body.active header .container .toggle .two {
+  opacity: 0;
+}
+
+header .container .toggle .three {
+  width: 100%;
+  background-color: #E6E5E3;
+  height: 3px;
+  -webkit-transition: -webkit-transform 0.1s linear;
+  transition: -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear;
+  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+}
+
+body.active header .container .toggle .three {
+  -webkit-transform: rotate(-40deg) translateY(-10px);
+          transform: rotate(-40deg) translateY(-10px);
+}
+
+header .container nav {
+  position: relative;
+  top: 60px;
+  width: 100%;
+  height: 100vh;
+  background-color: #8c8989;
+  text-align: center;
+  -webkit-transition: right 0.3s linear;
+  transition: right 0.3s linear;
+  right: 100%;
+  padding-top: 20px;
+}
+
+body.active header .container nav {
+  right: 0;
+}
+
+header .container nav a {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #fff;
+  cursor: default;
+}
+
+header .container nav a:hover {
+  color: #4F0094;
+}
+
+.section {
+  width: 100%;
+}
+
+.section .section-title {
+  color: #232F3E;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 25px;
+  font-family: "Fell";
+  font-weight: 100;
+}
+
+.section .img-h1 {
+  width: 100%;
+  height: 270px;
+}
+
+.section .p-h1 {
+  padding: 24px;
+  font-size: 17px;
+  font-family: "Sora";
+  color: #000;
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+}
+
+.main .article {
+  width: 100%;
+}
+
+.main .article .article-h2-p {
+  float: left;
+  width: 60%;
+  margin: 10px 0;
+}
+
+.main .article .article-h2-p .article-h2 {
+  text-align: center;
+  font-size: 16px;
+}
+
+.main .article .article-h2-p .article-p {
+  font-size: 16px;
+  padding: 0 15px;
+}
+
+.main .article .article-img {
+  margin: 10px 0;
+  padding-right: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  float: right;
+  width: 40%;
+  height: 125px;
+}
+
+.footer {
+  background-color: #04010F;
+  height: 60px;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #04010F;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    width: 50%;
+    max-width: 1500px;
+    margin: auto;
+  }
+  .main {
+    width: 50%;
+    max-width: 1500px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .section {
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+  }
+  .img-h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 650px;
+    margin: auto;
+  }
+  .main {
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+  }
+}
+/*# sourceMappingURL=Styles.css.map */
